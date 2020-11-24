@@ -14,7 +14,12 @@
     &_bot {}
 
     /* .header_nav */
-    &_nav {}
+    &_nav {
+        height: 40px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
 }
 
 .header_top {
@@ -95,29 +100,40 @@
 .header_bot {
 
     /* .header_bot__workspace */
-    &__workspace {}
+    &__workspace {
+        width: 100%;
+        height: 40px;
+        background: #333333;
+        position: absolute;
+        z-index: -1;
+    }
 }
 
 .nav_block {
-
-    /* .nav_block__1 */
-    &__1 {}
-
-    /* .nav_block__2 */
-    &__2 {}
-
-    /* .nav_block__3 */
-    &__3 {}
-
-    /* .nav_block__4 */
-    &__4 {}
+    z-index: 100;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    border: 0.1px solid #333333;
 }
+
 
 .nav {
 
     /* .nav_bg */
-    &_bg {}
+    &_bg {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+
+    }
 
     /* .nav_text */
-    &_text {}
+    &_text {
+        @include light;
+        @include f14;
+        color: #DDDDDD;
+    }
 }
