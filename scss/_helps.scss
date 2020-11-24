@@ -17,3 +17,25 @@
         border-radius: 0;
     }
 }
+
+.container {
+    max-width: 1130px;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    padding: 0 10px;
+}
+
+@mixin noselect {
+    user-select: none;
+}
+
+@mixin nopoint {
+    pointer-events: none;
+}
+
+@media all and (max-width: 768px) {
+    .container {
+        max-width: 709px;
+    }
+}

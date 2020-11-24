@@ -1,11 +1,7 @@
-.container {
-    max-width: 1110px;
-    display: flex;
-    justify-content: center;
-    margin: auto;
-}
-
 .header {
+    &_mobile__nav {
+        display: none;
+    }
 
     /* .header_top */
     &_top {}
@@ -53,6 +49,7 @@
         }
 
         p:nth-child(2) {
+            cursor: pointer;
             @include regular;
             @include f16;
             color: #161616;
@@ -61,6 +58,8 @@
 
     /* .header_top__middle */
     &__middle {
+        @include nopoint;
+        @include noselect;
         display: flex;
         flex-direction: column;
         @include light;
@@ -89,6 +88,7 @@
 
     /* .header_top__right */
     &__right {
+        width: 162px;
         display: flex;
         @include regular;
         @include f14;
@@ -135,5 +135,108 @@
         @include light;
         @include f14;
         color: #DDDDDD;
+    }
+}
+
+@media all and (max-width: 694px) {
+    .container {
+        max-width: 709px;
+    }
+
+    .header_top {
+        &__content {
+            display: block;
+        }
+
+        .header_top {
+            &__workspace {
+                height: 416px;
+            }
+
+            &__content {
+                display: flex;
+                flex-flow: wrap;
+                flex-direction: column;
+                justify-content: center;
+            }
+
+            &__left {
+                order: 2;
+                margin-bottom: 10px;
+
+                img {
+                    display: none;
+                }
+
+                p {
+                    margin-bottom: 5px;
+                }
+            }
+
+            &__middle {
+                order: 1;
+                margin-bottom: 15px;
+
+                img {
+                    margin-bottom: 15px;
+                }
+
+                p {
+                    margin-bottom: 15px;
+                }
+            }
+
+            &__right {
+                order: 3;
+            }
+        }
+    }
+}
+
+@media all and (max-width:480px) {
+    .header_bot {
+        display: none;
+    }
+
+    .header_mobile {
+
+        /* .header_mobile__nav */
+        &__nav {
+            display: block;
+            position: absolute;
+            width: 100%;
+        }
+
+        /* .header_mobile__open */
+        &__open {
+            position: absolute;
+            width: 100%;
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        /* .header_mobile__open--block */
+        &__open--block {
+
+
+            @include light;
+            @include f14;
+            background: #333333;
+            height: 30px;
+
+            p {
+                padding: 7px 0 7px 48px;
+                color: #FFFFFF;
+            }
+        }
+
+        &__toggle {
+            background: #333333;
+            height: 30px;
+
+            img {
+                margin: 10px 15px 10px 15px;
+            }
+        }
     }
 }

@@ -81,3 +81,9 @@ td:not([align]),
 th:not([align]) {
     text-align: left
 }
+
+a,
+a:active a:visited,
+a:link {
+    all: inherit;
+}

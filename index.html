@@ -3,13 +3,41 @@
 
 <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
     <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <title>Template</title>
 </head>
 
 <body>
     <header>
-
+        <div class="header_mobile__nav">
+            <div class="header_mobile__toggle">
+                <img src="img/menu.svg" alt="">
+            </div>
+            <div class="header_mobile__open">
+                <div class="header_mobile__open--block">
+                    <a href="">
+                        <p>О компании</p>
+                    </a>
+                </div>
+                <div class="header_mobile__open--block">
+                    <a href="">
+                        <p>Предложения</p>
+                    </a>
+                </div>
+                <div class="header_mobile__open--block">
+                    <a href="">
+                        <p>Наши работы</p>
+                    </a>
+                </div>
+                <div class="header_mobile__open--block">
+                    <a href="">
+                        <p>Отызвы</p>
+                    </a>
+                </div>
+            </div>
+        </div>
         <div class="header_top ">
             <div class="header_top__workspace">
                 <div class="header_top__content container">
@@ -17,7 +45,7 @@
                         <img src="img/header_left_call.svg" alt="">
                         <div class="header_top__left-text">
                             <p>Ежедневно с 8:00 до 20:00</p>
-                            <p>+7 (926) 902-88-59</p>
+                            <p><a href="tel:+79279028859">+7 (926) 902-88-59</a></p>
                         </div>
                     </div>
                     <div class="header_top__middle">
@@ -72,6 +100,9 @@
         </div>
     </header>
 </body>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js">
+    AOS.init();
+</script>
 <script type="text/javascript" src="js/jquery.js"></script>
 <script type="text/javascript" src="js/script.js"></script>
 
