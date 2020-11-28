@@ -8,16 +8,21 @@ $(nav_button).hover(function () {
         'opacity': '1',
         'visibility': 'visible',
         'transition': '0.5s',
-        'border': '0.1px solid #DDDDDD',
-        'box-sizing': 'border-box',
+        'box-sizing': 'border-box'
+    })
+    $("p", this).css({
+        'color': '#FFFFFF'
     })
 }, function () {
     $(this).css({
         'background': '',
         'opacity': '1',
         'visibility': '',
-        'border': '0.1px solid #333333',
-        'box-sizing': ''
+        'box-sizing': '',
+        'color': ''
+    })
+    $("p", this).css({
+        'color': ''
     })
 })
 
@@ -57,6 +62,46 @@ $(header_mobile__toggle).click(function (e) {
                 'transition': '1s',
                 'visibility': ''
             });
+        }
+    });
+});
+
+const checkBox = $(".true");
+const sendForm = $(".form_input__send input")
+let checkBoxEnable = 0;
+$(".form_input__check--box").click(function (e) {
+    e.preventDefault();
+    $(checkBox).toggleClass("show");
+    if (checkBox.hasClass("show")) {
+        checkBoxEnable = 1;
+    } else {
+        checkBoxEnable = 0;
+    }
+});
+
+$(sendForm).click(function (e) {
+
+    if ((checkBoxEnable == 0) || ($("#name").val() == "") || (($("#tel").val().length != 11) && ($("#tel").val().length != 6))) {
+        e.preventDefault();
+        $(".form_error").addClass("show");
+
+    } else {
+
+    }
+});
+
+$(document).ready(function () {
+    $("#tel").bind("change keyup input click", function () {
+        if (this.value.match(/[^0-9]/g)) {
+            this.value = this.value.replace(/[^0-9]/g, '');
+        }
+    });
+});
+
+$(document).ready(function () {
+    $("#name").bind("change keyup input click", function () {
+        if (this.value.match(/[^а-яА-Я]/g)) {
+            this.value = this.value.replace(/[^а-яА-Я]/g, '');
         }
     });
 });

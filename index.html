@@ -70,28 +70,36 @@
                     <div class="nav_block">
                         <div class="nav_bg">
                             <div class="nav_text">
-                                <p>О компании</p>
+                                <a href="#">
+                                    <p>О компании</p>
+                                </a>
                             </div>
                         </div>
                     </div>
                     <div class="nav_block">
                         <div class="nav_bg">
                             <div class="nav_text">
-                                <p>Предложения</p>
+                                <a href="#">
+                                    <p>Предложения</p>
+                                </a>
                             </div>
                         </div>
                     </div>
                     <div class="nav_block">
                         <div class="nav_bg">
                             <div class="nav_text">
-                                <p>Преимущества</p>
+                                <a href="#">
+                                    <p>Преимущества</p>
+                                </a>
                             </div>
                         </div>
                     </div>
                     <div class="nav_block">
                         <div class="nav_bg">
                             <div class="nav_text">
-                                <p>Отзывы</p>
+                                <a href="#">
+                                    <p>Отзывы</p>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -99,6 +107,57 @@
             </div>
         </div>
     </header>
+
+    <div class="main">
+        <div class="main_bg">
+            <div class="container">
+                <div class="main_left">
+                    <h1>Заполните заявку чтобы получить скидку 10 %</h1>
+                    <h2>Замер бесплатно!</h2>
+                </div>
+                <!-- /.main_left -->
+                <div class="main_right">
+                    <form action="">
+                        <div class="form_title">
+                            <p>Оставить заявку</p>
+                        </div>
+                        <div class="form_input">
+                            <div class="form_input__name">
+                                <span class="important">*</span>
+                                <p>Имя</p>
+
+                            </div>
+                            <input type="text" class="input_text" id="name" maxlength="20">
+                            <div class="form_input__num">
+                                <span class="important">*</span>
+                                <p>Телефон</p>
+
+                            </div>
+                            <input type="text" class="input_text" id="tel" maxlength="11"">
+                            <div class=" form_input__check">
+                            <div class="form_input__check--box">
+                                <div class="true "><img src="img/true.svg" alt=""></div>
+                            </div>
+                            <span class="important">*</span>
+                            <p>Я согласен на обработку моих персональных данных</p>
+                        </div>
+
+                        <div class="form_input__send">
+                            <input type="submit">
+                        </div>
+                        <div class="form_error">
+                            <p>Заполните все поля и согласитесь на обработку данных !</p>
+                        </div>
+                </div>
+                </form>
+            </div>
+            <!-- /.main_right -->
+        </div>
+    </div>
+    <!-- /.main_bg container -->
+    </div>
+    <!-- /.main -->
+
 </body>
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js">
     AOS.init();

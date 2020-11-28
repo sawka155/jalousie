@@ -26,6 +26,14 @@
     padding: 0 10px;
 }
 
+.important {
+    @include f12;
+    @include light;
+    color: #D33030;
+    margin-right: 5px;
+
+}
+
 @mixin noselect {
     user-select: none;
 }

@@ -4,7 +4,10 @@
     }
 
     /* .header_top */
-    &_top {}
+    &_top {
+        position: relative;
+        width: 100%;
+    }
 
     /* .header_bot */
     &_bot {}
@@ -104,8 +107,6 @@
         width: 100%;
         height: 40px;
         background: #333333;
-        position: absolute;
-        z-index: -1;
     }
 }
 
@@ -114,7 +115,6 @@
     width: 100%;
     height: 100%;
     cursor: pointer;
-    border: 0.1px solid #333333;
 }
 
 
@@ -134,7 +134,10 @@
     &_text {
         @include light;
         @include f14;
-        color: #DDDDDD;
+
+        p {
+            color: #DDDDDD;
+        }
     }
 }
 
@@ -194,6 +197,10 @@
 }
 
 @media all and (max-width:480px) {
+    .header_top {
+        position: static;
+    }
+
     .header_bot {
         display: none;
     }
