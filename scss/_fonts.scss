@@ -52,8 +52,16 @@
 	font-size: 28px;
 }
 
+@mixin f32 {
+	font-size: 32px;
+}
+
 @mixin f34 {
 	font-size: 34px;
+}
+
+@mixin f42 {
+	font-size: 42px;
 }
 
 @mixin f52 {

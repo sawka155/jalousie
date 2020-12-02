@@ -190,3 +190,56 @@
         border: 0px;
     }
 }
+
+@media all and (max-width: 768px) {
+    .main {
+        &_flex {
+            display: flex;
+            flex-direction: column;
+
+            align-items: center;
+        }
+
+        &_bg {
+            display: flex;
+            height: 640px;
+        }
+
+        /* .main_left */
+        &_left {
+            height: 100%;
+            text-align: center;
+            width: 100%;
+
+            h1 {
+                @include f42;
+            }
+        }
+
+        &_right {
+            padding-top: 30px;
+        }
+    }
+
+}
+
+@media all and (max-width: 510px) {
+    .main {
+        &_left {
+            h1 {
+                @include f32;
+            }
+
+            h2 {
+                @include f16;
+            }
+        }
+
+        &_right {
+            form {
+                width: 100%;
+                max-width: 290px;
+            }
+        }
+    }
+}
