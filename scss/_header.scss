@@ -230,8 +230,6 @@
 
         /* .header_mobile__open--block */
         &__open--block {
-
-
             @include light;
             @include f14;
             background: #333333;
@@ -245,10 +243,10 @@
 
         &__toggle {
             background: #333333;
-            height: 30px;
+            height: 40px;
 
             img {
-                margin: 10px 15px 10px 15px;
+                margin: 15px 15px;
             }
         }
     }
