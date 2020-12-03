@@ -1,10 +1,12 @@
 .header {
+
     &_mobile__nav {
         display: none;
     }
 
     /* .header_top */
     &_top {
+
         position: relative;
         width: 100%;
     }
@@ -61,13 +63,14 @@
 
     /* .header_top__middle */
     &__middle {
-        @include nopoint;
-        @include noselect;
+
         display: flex;
         flex-direction: column;
         @include light;
 
         img {
+            @include nopoint;
+            @include noselect;
             width: 75px;
             height: 75px;
             margin: 0 auto;
@@ -91,12 +94,14 @@
 
     /* .header_top__right */
     &__right {
-        width: 162px;
-        display: flex;
-        @include regular;
-        @include f14;
-        color: #FFFFFF;
-        background: #A13232;
+        button {
+            width: 162px;
+            display: flex;
+            @include regular;
+            @include f14;
+            color: #FFFFFF;
+            background: #A13232;
+        }
     }
 }
 
@@ -209,9 +214,10 @@
 
         /* .header_mobile__nav */
         &__nav {
+            position: fixed;
             display: block;
-            position: absolute;
             width: 100%;
+            z-index: 100;
         }
 
         /* .header_mobile__open */

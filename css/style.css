@@ -116,6 +116,7 @@ a:link {
 }
 
 .jalousie_button {
+  outline: none;
   width: 162px;
   height: 30px;
   -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
@@ -131,11 +132,11 @@ a:link {
       -ms-flex-align: center;
           align-items: center;
   cursor: pointer;
-}
-
-.jalousie_button:hover {
-  border: 2px solid #FFFFFF;
-  border-radius: 0;
+  border: 0px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 .container {
@@ -155,6 +156,11 @@ a:link {
   font-family: "Roboto-light";
   color: #D33030;
   margin-right: 5px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  pointer-events: none;
 }
 
 @media all and (max-width: 768px) {
@@ -243,11 +249,6 @@ a:link {
 }
 
 .header_top__middle {
-  pointer-events: none;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -259,6 +260,11 @@ a:link {
 }
 
 .header_top__middle img {
+  pointer-events: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
   width: 75px;
   height: 75px;
   margin: 0 auto;
@@ -278,7 +284,7 @@ a:link {
   text-align: center;
 }
 
-.header_top__right {
+.header_top__right button {
   width: 162px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -402,9 +408,10 @@ a:link {
     /* .header_mobile__open--block */
   }
   .header_mobile__nav {
+    position: fixed;
     display: block;
-    position: absolute;
     width: 100%;
+    z-index: 100;
   }
   .header_mobile__open {
     position: absolute;
@@ -563,10 +570,12 @@ a:link {
   color: #000000;
   margin-top: 30px;
   margin-bottom: 40px;
+  cursor: pointer;
+  width: 240px;
 }
 
 .form_input__check--box {
-  width: 24.2px;
+  width: 27.48px;
   height: 17px;
   left: 985px;
   top: 510px;
@@ -589,6 +598,14 @@ a:link {
 
 .form_input .true {
   display: none;
+}
+
+.form_input .true img {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  pointer-events: none;
 }
 
 .form_input .form_error {
@@ -629,6 +646,7 @@ a:link {
 }
 
 .form_input__send input {
+  outline: none;
   width: 162px;
   height: 30px;
   font-size: 14px;
@@ -683,6 +701,7 @@ a:link {
     display: -ms-flexbox;
     display: flex;
     height: 640px;
+    background-position: 0% 45%;
   }
   .main_left {
     height: 100%;
@@ -707,6 +726,192 @@ a:link {
   .main_right form {
     width: 100%;
     max-width: 290px;
+  }
+}
+
+.container_about {
+  max-width: 1130px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: auto;
+  padding: 0 10px;
+}
+
+.about {
+  width: 100%;
+  height: 524px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  /* .about_left */
+  /* .about_right */
+}
+
+.about_bg {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+}
+
+.about_left {
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+}
+
+.about_right {
+  width: 50%;
+  height: 524px;
+  position: absolute;
+  left: 50%;
+  z-index: -1;
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.15)), to(rgba(0, 0, 0, 0.15))), url("../img/about.jpg");
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15)), url("../img/about.jpg");
+  background-size: cover;
+  background-position: 50% 0;
+}
+
+.about_left {
+  /* .about_left__bg */
+  /* .about_left__title */
+  /* .about_left__text */
+}
+
+.about_left__bg {
+  width: 721px;
+  height: 404px;
+  background: rgba(249, 249, 249, 0.92);
+  border-radius: 8px;
+  padding: 15px 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.about_left__title {
+  font-family: "Roboto-light";
+  font-size: 32px;
+}
+
+.about_left__text {
+  text-align: justify;
+  font-family: "Roboto-light";
+  font-size: 20px;
+}
+
+.about_left button {
+  width: 162px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-family: "Roboto-regular";
+  font-size: 14px;
+  color: #FFFFFF;
+  background: #A13232;
+}
+
+@media all and (max-width: 768px) {
+  .container_about {
+    max-width: 709px;
+  }
+  .about_left {
+    /* .about_left__bg */
+    /* .about_left__title */
+    /* .about_left__text */
+  }
+  .about_left__bg {
+    width: 509px;
+  }
+  .about_left__title {
+    font-size: 26px;
+  }
+  .about_left__text {
+    font-size: 18px;
+  }
+}
+
+@media all and (max-width: 528px) {
+  .container_about {
+    padding: 0;
+  }
+  .about_left {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin: 0 auto;
+    width: 100%;
+    /* .about_left__bg */
+    /* .about_left__title */
+    /* .about_left__text */
+  }
+  .about_left__bg {
+    width: 100%;
+    height: 480px;
+    border-radius: 0px;
+    padding: 15px 15px;
+    background: rgba(249, 249, 249, 0.87);
+  }
+  .about_left__title {
+    font-size: 22px;
+  }
+  .about_left__text {
+    font-size: 16px;
+  }
+  .about_left button {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin: 0 auto;
+  }
+  .about {
+    /* .about_right */
+  }
+  .about_right {
+    width: 100%;
+    height: 567px;
+    position: absolute;
+    left: 0;
+  }
+}
+
+@media all and (max-width: 340px) {
+  .about_left {
+    /* .about_left__title */
+    /* .about_left__text */
+  }
+  .about_left__bg {
+    height: 447px;
+  }
+  .about_left__title {
+    font-size: 20px;
+  }
+  .about_left__text {
+    font-size: 14px;
   }
 }
 /*# sourceMappingURL=style.css.map */

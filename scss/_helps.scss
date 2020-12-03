@@ -1,7 +1,17 @@
+@mixin noselect {
+    user-select: none;
+}
+
+@mixin nopoint {
+    pointer-events: none;
+}
+
+
 .jalousie {
 
     /* .jalousie_button */
     &_button {
+        outline: none;
         width: 162px;
         height: 30px;
         box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
@@ -10,11 +20,8 @@
         justify-content: center;
         align-items: center;
         cursor: pointer;
-    }
-
-    &_button:hover {
-        border: 2px solid #FFFFFF;
-        border-radius: 0;
+        border: 0px;
+        @include noselect;
     }
 }
 
@@ -31,15 +38,9 @@
     @include light;
     color: #D33030;
     margin-right: 5px;
+    @include noselect;
+    @include nopoint;
 
-}
-
-@mixin noselect {
-    user-select: none;
-}
-
-@mixin nopoint {
-    pointer-events: none;
 }
 
 @media all and (max-width: 768px) {
