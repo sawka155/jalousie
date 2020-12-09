@@ -133,7 +133,7 @@ $(sendForm).click(function (e) {
     }
 });
 
-$("#tel").mask("+7 (999) 999-99-99");
+$("#tel").mask("8 (999) 999-9999");
 
 
 $(document).ready(function () {
