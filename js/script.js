@@ -119,7 +119,7 @@ $(".form_input__check").click(function (e) {
 
 $(sendForm).click(function (e) {
 
-    if ((checkBoxEnable == 0) || ($("#name").val() == "") || (($("#tel").val().length != 18))) {
+    if ((checkBoxEnable == 0) || ($("#name").val() == "") || (($("#tel").val().length != 11))) {
         e.preventDefault();
         $(".form_error").addClass("show");
 
@@ -133,9 +133,13 @@ $(sendForm).click(function (e) {
     }
 });
 
-$("#tel").mask("8 (999) 999-9999");
-
-
+$(document).ready(function () {
+    $("#tel").bind("change keyup input click", function () {
+        if (this.value.match(/[^0-9]/g)) {
+            this.value = this.value.replace(/[^0-9]/g, '');
+        }
+    });
+});
 $(document).ready(function () {
     $("#name").bind("change keyup input click", function () {
         if (this.value.match(/[^а-яА-Я]/g)) {
@@ -159,7 +163,7 @@ $(".form_inputfeedback__check--feedback").click(function (e) {
 
 $(sendForm_1).click(function (e) {
 
-    if ((checkBoxEnable_1 == 0) || ($("#name_1").val() == "") || (($("#tel_1").val().length != 18))) {
+    if ((checkBoxEnable_1 == 0) || ($("#name_1").val() == "") || ($("#tel_1").val().length != 11)) {
         e.preventDefault();
         $(".form_error__feedback").addClass("show");
 
@@ -177,8 +181,14 @@ $(sendForm_1).click(function (e) {
     }
 });
 
-$("#tel_1").mask("+7 (999) 999-99-99");
 
+$(document).ready(function () {
+    $("#tel_1").bind("change keyup input click", function () {
+        if (this.value.match(/[^0-9]/g)) {
+            this.value = this.value.replace(/[^0-9]/g, '');
+        }
+    });
+});
 
 $(document).ready(function () {
     $("#name_1").bind("change keyup input click", function () {
