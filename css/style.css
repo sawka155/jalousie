@@ -1169,6 +1169,10 @@ a:link {
   }
 }
 
+.suggestions_top-text {
+  margin: 10px 0;
+}
+
 .suggestions {
   /* .suggestions_top */
   /* .suggestions_bottom */
@@ -1199,6 +1203,7 @@ a:link {
   color: #868686;
   font-size: 20px;
   font-family: "Roboto-light";
+  text-align: center;
 }
 
 .suggestions_top__container {
@@ -1230,13 +1235,13 @@ a:link {
 
 .suggestions_button__text p:nth-child(1) {
   color: #FFFFFF;
-  font-size: 10px;
-  font-family: "Roboto-bold";
+  font-size: 10.5px;
+  font-family: "Roboto-regular";
 }
 
 .suggestions_button__text p:nth-child(2) {
   color: #FFFFFF;
-  font-size: 14px;
+  font-size: 15px;
   font-family: "Roboto-bold";
   margin-top: -3px;
 }
@@ -1280,11 +1285,105 @@ a:link {
 }
 
 .suggestions_bottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   /* .suggestions_bottom__product */
+}
+
+.suggestions_bottom__product {
+  width: 356px;
+  height: 480px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  background-size: cover !important;
+  background-position: center !important;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-shadow: 0px -3px 4px rgba(0, 0, 0, 0.25), 0px 3px 4px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px -3px 4px rgba(0, 0, 0, 0.25), 0px 3px 4px rgba(0, 0, 0, 0.25);
+}
+
+.suggestions_bottom__product:nth-child(1) {
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.33)), to(rgba(0, 0, 0, 0.33))), url("../img/product/rimskie.jpg");
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.33), rgba(0, 0, 0, 0.33)), url("../img/product/rimskie.jpg");
+}
+
+.suggestions_bottom__product:nth-child(2) {
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.33)), to(rgba(0, 0, 0, 0.33))), url("../img/product/combo.jpg");
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.33), rgba(0, 0, 0, 0.33)), url("../img/product/combo.jpg");
+}
+
+.suggestions_bottom__product:nth-child(3) {
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.33)), to(rgba(0, 0, 0, 0.33))), url("../img/product/rulon.jpg");
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.33), rgba(0, 0, 0, 0.33)), url("../img/product/rulon.jpg");
+}
+
+.suggestions_bottom__product:nth-child(4) {
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.33)), to(rgba(0, 0, 0, 0.33))), url("../img/product/plisse.jpg");
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.33), rgba(0, 0, 0, 0.33)), url("../img/product/plisse.jpg");
+}
+
+.suggestions_bottom__product:nth-child(5) {
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.33)), to(rgba(0, 0, 0, 0.33))), url("../img/product/derevo.jpg");
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.33), rgba(0, 0, 0, 0.33)), url("../img/product/derevo.jpg");
+}
+
+.suggestions_bottom__product:nth-child(6) {
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.33)), to(rgba(0, 0, 0, 0.33))), url("../img/product/vert.jpg");
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.33), rgba(0, 0, 0, 0.33)), url("../img/product/vert.jpg");
 }
 
 .product {
   /* .product_menu */
+}
+
+.product_menu {
+  width: 322px;
+  height: 170px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background: rgba(0, 0, 0, 0.65);
+  border-radius: 4px;
+  margin-bottom: 16px;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 15px 0;
+}
+
+.product_menu p {
+  font-family: "Roboto-light";
+  color: #FFFFFF;
+  font-size: 20px;
+}
+
+.product_menu p:nth-child(2) {
+  color: rgba(255, 255, 255, 0.66);
+  font-size: 14px;
 }
 
 .prduct {
@@ -1293,5 +1392,101 @@ a:link {
 
 .jalousie {
   /* .jalousie_button */
+}
+
+.jalousie_button {
+  background: rgba(255, 46, 46, 0.5);
+  -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+  border-radius: 2px;
+}
+
+.jalousie_button p {
+  font-family: "Roboto-regular";
+  font-size: 14px;
+}
+
+@media all and (max-width: 1110px) {
+  .container {
+    max-width: 650px;
+  }
+  .suggestions_bottom__product {
+    width: 306px;
+    height: 420px;
+  }
+  .product {
+    /* .product_menu */
+  }
+  .product_menu {
+    width: 272px;
+    height: 160px;
+  }
+}
+
+@media all and (max-width: 660px) {
+  .suggestions_bottom {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .suggestions_bottom__product {
+    width: 316px;
+    height: 420px;
+  }
+  .product {
+    /* .product_menu */
+  }
+  .product_menu {
+    width: 272px;
+    height: 160px;
+  }
+}
+
+@media all and (max-width: 410px) {
+  .suggestions {
+    /* .suggestions_top */
+  }
+  .suggestions_top p:nth-child(1) {
+    font-family: "Roboto-light";
+    font-size: 28px;
+  }
+  .suggestions_top p:nth-child(2) {
+    font-family: "Roboto-light";
+    font-size: 16px;
+  }
+  .suggestions_button p:nth-child(1) {
+    font-size: 10.5px;
+    font-family: "Roboto-regular";
+  }
+  .suggestions_button p:nth-child(2) {
+    font-size: 15px;
+    font-family: "Roboto-bold";
+  }
+  .suggestions_top {
+    /* .suggestions_top__button */
+  }
+  .suggestions_top__button {
+    width: 135px;
+    margin: 0 5px;
+  }
+}
+
+@media all and (max-width: 346px) {
+  .suggestions_bottom {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .suggestions_bottom__product {
+    width: 280px;
+    height: 400px;
+  }
+  .product {
+    /* .product_menu */
+  }
+  .product_menu {
+    width: 252px;
+    height: 160px;
+  }
 }
 /*# sourceMappingURL=style.css.map */

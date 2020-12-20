@@ -151,6 +151,17 @@ $(document).ready(function () {
 const checkBox_1 = $(".true_1");
 const sendForm_1 = $(".form_inputfeedback__send--feedback input")
 let checkBoxEnable_1 = 0;
+
+function checkOff() {
+    $("#tel_1").val("");
+    $("#name_1").val("");
+    checkBoxEnable_1 = 0;
+    $(checkBox_1).removeClass("show")
+    $(".form_error__feedback").removeClass("show");
+    $('.feedback_box').css({
+        'display': ''
+    });
+}
 $(".form_inputfeedback__check--feedback").click(function (e) {
 
     $(checkBox_1).toggleClass("show");
@@ -169,14 +180,7 @@ $(sendForm_1).click(function (e) {
 
     } else {
         e.preventDefault();
-        $("#tel_1").val("");
-        $("#name_1").val("");
-        checkBoxEnable_1 = 0;
-        $(checkBox_1).toggleClass("show")
-        $(".form_error__feedback").removeClass("show");
-        $('.feedback_box').css({
-            'display': ''
-        });
+        checkOff()
 
     }
 });
@@ -214,16 +218,9 @@ $('.form_close').click(function (e) {
         'display': ''
     });
     $('body').css({
-        'overflow-y': ''
+        'overflow-y': 'visible'
     });
-    $("#tel_1").val("");
-    $("#name_1").val("");
-    checkBoxEnable_1 = 0;
-    $(checkBox_1).toggleClass("show")
-    $(".form_error__feedback").removeClass("show");
-    $('.feedback_box').css({
-        'display': ''
-    });
+    checkOff()
 });
 $('.feedback_box').click(function (e) {
     if (!$('.form_feedback').is(e.target) && $('.form_feedback').has(e.target).length === 0) {
@@ -231,19 +228,24 @@ $('.feedback_box').click(function (e) {
             'display': ''
         });
         $('body').css({
-            'overflow-y': ''
+            'overflow-y': 'visible'
         });
-        $("#tel_1").val("");
-        $("#name_1").val("");
-        checkBoxEnable_1 = 0;
-        $(checkBox_1).toggleClass("show")
-        $(".form_error__feedback").removeClass("show");
-        $('.feedback_box').css({
-            'display': ''
-        });
+        checkOff()
     }
 
 });
+//
 
-
+//suggestions_top__button
+const instVk = $(".suggestions_top__button");
+$(instVk).hover(function () {
+    // over
+    $(this).css({
+        "filter": "invert(100%)"
+    });
+}, function () {
+    $(this).css({
+        "filter": ""
+    });
+});
 //
