@@ -1110,6 +1110,9 @@ a:link {
   .container_about {
     padding: 0;
   }
+  .about {
+    height: 567px;
+  }
   .about_left {
     display: -webkit-box;
     display: -ms-flexbox;
