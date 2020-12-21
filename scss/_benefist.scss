@@ -1,0 +1,167 @@
+.benefist {
+    width: 100%;
+    display: flex;
+    @include light;
+    background: rgba(250, 250, 250, 0.3);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+    /* .benefist_left */
+    &_left {
+        width: 50%;
+        height: 503px;
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+            url("/img/benefist.png");
+        background-size: cover;
+        background-position: 100% 50%;
+    }
+
+    /* .benefist_right */
+    &_right {
+
+        width: 50%;
+        max-width: 555px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+}
+
+.benefist_right {
+
+    /* .benefist_right__title */
+    &__title {
+        padding-left: 75px;
+        @include f32;
+        color: #333333;
+    }
+
+    /* .benefist_right__step */
+    &__step {
+        padding-left: 75px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        height: 350px;
+        justify-content: space-between;
+    }
+}
+
+.step {
+    max-width: 408px;
+    display: flex;
+    padding-right: 10px;
+
+    /* .step_img */
+    &_img {
+        @include nopoint;
+        @include noselect;
+        width: 55px;
+        min-width: 55px;
+    }
+
+    &_cont {
+        display: flex;
+        flex-direction: column;
+        margin-left: 10px;
+    }
+
+
+    /* .step_title */
+    &_title {
+        @include f24;
+        color: #983031;
+        padding-bottom: 3px;
+    }
+
+    /* .step_text */
+    &_text {
+        @include f18;
+        color: #333333;
+    }
+
+    &_button {
+        @include f14;
+        color: #FFFFFF;
+        background: #333333;
+        box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+        border-radius: 2px;
+        margin: 0 auto;
+        @include regular;
+    }
+}
+
+.jalousie {
+
+    /* .jalousie_button */
+    &_button {}
+}
+
+@media all and (max-width: 1000px) {
+
+
+    .benefist_right {
+        &__title {
+            padding-left: 15px;
+        }
+
+        &__step {
+            padding-left: 15px;
+        }
+    }
+}
+
+@media all and (max-width: 720px) {
+    .benefist {
+        width: 100%;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25),
+            0px -4px 4px rgba(0, 0, 0, 0.25);
+
+        &_left {
+            width: 100%;
+        }
+
+        &_right {
+            height: 503px;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            position: absolute;
+            min-width: 100%;
+            background: rgba(255, 255, 255, 0.8);
+
+            &__step {
+                width: 100%;
+                height: 385px;
+                align-items: center;
+            }
+        }
+    }
+
+    .step {
+        width: 400px;
+        max-width: 400px;
+
+        &_title {
+            @include f22;
+        }
+
+        /* .step_text */
+        &_text {
+            @include f16;
+        }
+    }
+}
+
+@media all and (max-width: 415px) {
+
+    .step {
+        max-width: 320px;
+    }
+}
+
+@media all and (max-width: 338px) {
+
+    .step {
+        max-width: 295px;
+    }
+}
