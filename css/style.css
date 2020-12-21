@@ -1681,6 +1681,7 @@ a:link {
 }
 
 .feedback {
+  display: none;
   background: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.59)), to(rgba(0, 0, 0, 0.59))), url("/img/feedback_1.jpg");
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.59), rgba(0, 0, 0, 0.59)), url("/img/feedback_1.jpg");
   background-size: cover;
@@ -1699,9 +1700,6 @@ a:link {
 }
 
 .feedback {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   /* .feedback_middle */
   /* .feedback_boxs */
 }
