@@ -257,6 +257,7 @@ a:link {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  width: 210px;
 }
 
 .header_top__left-text {
@@ -374,6 +375,15 @@ a:link {
   }
   .header_top__content {
     display: block;
+  }
+  .header_top__left {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
   .header_top .header_top__workspace {
     height: 416px;
