@@ -111,6 +111,10 @@ a:link {
   font-weight: normal;
 }
 
+* input[type=text] {
+  padding-left: 5.5px;
+}
+
 .jalousie {
   /* .jalousie_button */
 }
