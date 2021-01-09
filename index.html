@@ -115,8 +115,7 @@
                                 <span class="important">*</span>
                                 <p>Телефон</p>
                             </div>
-                            <input type="text" class="input_text" id="tel" maxlength="11"
-                                placeholder="7 (900) 000-00-00">
+                            <input type="text" class="input_text" id="tel" maxlength="11" placeholder="7 (900) 000-00-00">
                             <div class=" form_input__check">
                                 <div class="form_input__check--box">
                                     <div class="true "><img src="img/ico/true.svg" alt=""></div>
@@ -164,8 +163,7 @@
                             <span class="important">*</span>
                             <p>Телефон</p>
                         </div>
-                        <input type="text" class="input_text__feedback" id="tel_1" maxlength="11"
-                            placeholder="7 (900) 000-00-00">
+                        <input type="text" class="input_text__feedback" id="tel_1" maxlength="11" placeholder="7 (900) 000-00-00">
                     </div>
                     <div class="form_inputfeedback__check--feedback">
                         <div class="form_inputfeedback__check--boxfeedback">
@@ -194,17 +192,9 @@
                         <p>О компании</p>
                     </div>
                     <div class="about_left__text">
-                        <p>Если вы ищете жалюзи - вы обратились по адресу! Не к чему мучить себя утомительными походами
-                            по
-                            салонам в надежде среди готовых вариантов найти что-то, что идеально впишется в ваш
-                            интерьер.
-                            Обращайтесь к нам - и мы вместе с вами подберем именно то, что вам нужно - будь то офис,
-                            квартира, загородный дом или что-то другое.
-                            <br><br>
-                            Как происходит работа? Свяжитесь с нами любым удобным для вас способом, расскажите что вам
-                            необходимо. Наши сотрудники приедут в удобное для вас время и проведут замеры, после чего вы
-                            вместе утвердите эскиз и подпишите договор. Далее за работу возьмутся наши мастера и в
-                            кратчайшие сроки вы получите те жалюзи, о которых мечтали.</p>
+                        <p>Если вы ищете жалюзи - вы обратились по адресу! Не к чему мучить себя утомительными походами по салонам в надежде среди готовых вариантов найти что-то, что идеально впишется в ваш интерьер. Обращайтесь к нам - и мы вместе с вами подберем именно то, что вам нужно - будь то офис, квартира, загородный дом или что-то другое.</p>
+                        <br>
+                        <p>Как происходит работа? Свяжитесь с нами любым удобным для вас способом, расскажите что вамнеобходимо. Наши сотрудники приедут в удобное для вас время и проведут замеры, после чего вы вместе утвердите эскиз и подпишите договор. Далее за работу возьмутся наши мастера и в кратчайшие сроки вы получите те жалюзи, о которых мечтали.</p>
                     </div>
                     <button class="jalousie_button">
                         <p>Перезвоните мне</p>
@@ -379,43 +369,59 @@
         </div>
     </div>
     <div class="feedback">
-        <div class="container feedback_full">
-            <div class="feedback_top">
+        <div class="feedback__body container feedback__container">
+            <div class="feedback__title">
                 <p>Остались вопросы?</p>
-                <p>Оставьте заявку прямо сейчас на консультацию с дизайнером</p>
             </div>
-            <div class="feedback_middle">
-                <div class="feedback_middle__input">
-                    <div class="feedback_boxs">
-                        <div class="feedback_boxs__title">
-                            <span class="important">*</span>
+            <div class="feedback__subtitle">
+                <p>Оставьте заявку на консультацию прямо сейчас </p>
+            </div>
+            <div class="feedback__row">
+                <div class="feedback__column">
+                    <div class="item-feedback">
+                        <span class="important">*</span>
+                        <div class="item-feedback__title">
                             <p>Имя</p>
                         </div>
-                        <input type="text" class="input_text feedback_text" placeholder="Имя">
-                    </div>
-                    <div class="feedback_boxs">
-                        <div class="feedback_boxs__title">
-                            <span class="important">*</span>
-                            <p>Телефон</p>
-                        </div>
-                        <input type="text" class="input_text feedback_text" placeholder="7 (900) 000-00-00">
-                    </div>
-                    <div class="feedback_boxs">
-                        <div class="feedback_boxs__title">
-                            <span class="important">*</span>
-                            <p>E-mail</p>
-                        </div>
-                        <input type="text" class="input_text feedback_text" placeholder="Электронная почта">
+                        <input type="text" class="item-feedback__input item-feedback__name" maxlength="20" placeholder="Имя">
+
                     </div>
                 </div>
-                <div class=" form_input__check_2">
-                    <div class="form_input__check--box_2">
-                        <div class="true "><img src="img/ico/true.svg" alt=""></div>
+                <div class="feedback__column">
+                    <div class="item-feedback">
+                        <span class="important">*</span>
+                        <div class="item-feedback__title">
+                            <p>Телефон</p>
+                        </div>
+                        <input type="text" class="item-feedback__input item-feedback__phone" maxlength="11" placeholder="7 (900) 000-00-00">
                     </div>
-                    <span class="important">*</span>
+                </div>
+                <div class="feedback__column">
+                    <div class="item-feedback">
+                        <span class="important">*</span>
+                        <div class="item-feedback__title ">
+                            <p>E-Mail</p>
+                        </div>
+                        <input type="text" id="email" class="item-feedback__input item-feedback__mail" maxlength="50" placeholder="Email">
+                    </div>
+                </div>
+            </div>
+            <div class="check-feedback">
+                <div class="check-feedback__jackdaw">
+                    <div class="jackdaw-active"></div>
+                </div>
+                <span class="important">*</span>
+                <div class="check-feedback__title">
                     <p>Я согласен на обработку моих персональных данных</p>
                 </div>
             </div>
+            <div class="feedback__error">
+                <p>Заполните все поля и согласитесь на обработку данных !</p>
+            </div>
+            <button class="jalousie-button feedback-button">
+                <p>Отправить</p>
+            </button>
+
         </div>
     </div>
 </body>

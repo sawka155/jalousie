@@ -1,115 +1,228 @@
 .feedback {
-    display: none;
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.59), rgba(0, 0, 0, 0.59)),
-        url("/img/feedback_1.jpg");
-    background-size: cover;
+    position: relative;
+    z-index: 1;
     height: 315px;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.59), rgba(0, 0, 0, 0.59)),
+        url("../img/feedback_2.jpg");
 
-    /* .feedback_top */
-    &_top {
+    width: 100%;
+    background-size: contain;
+    background-position: center 100%;
+    background-attachment: fixed;
+
+    /* .feedback__body */
+    p {
+        color: #FFFFFF;
+        @include light;
+    }
+
+    &__body {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+    }
+
+    /* .feedback__title */
+
+    &__title {
+        @include f52;
+        text-align: center
+    }
+
+    /* .feedback__subtitle */
+
+    &__subtitle {
+        @include f22;
+        text-align: center;
+    }
+
+    /* .feedback__row */
+
+    &__row {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        justify-content: space-evenly;
+        @include f14;
+    }
+
+    /* .feedback__column */
+
+    &__column {
+        width: 201px;
+    }
+
+    &__container {
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    &__error {
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        max-width: 100%;
+        display: none;
 
         p {
-            color: #FFFFFF;
-            @include light;
-            @include f52;
-        }
-
-        p:nth-child(2) {
-            @include f22;
+            @include regular;
+            @include f12;
+            color: #D33030;
         }
     }
 }
 
-.input_text {}
+.item-feedback {
+    display: flex;
+    flex-direction: row;
+    /* .item-feedback__title */
 
-.feedback {
-
-    &__text {
-        max-width: 150px;
+    &__title {
+        margin: auto 15px auto 0;
     }
 
-    /* .feedback_middle */
-    &_middle {
+    /* .item-feedback__input */
+
+    &__input {
+        max-width: 150px;
+        height: 25px;
+
+        background: #FFFFFF;
+        border-radius: 5px;
+        border: 0;
+    }
+}
+
+.check-feedback {
+    display: flex;
+    @include f14;
+    /* .check-feedback__jackdaw */
+
+    &__jackdaw {}
+
+    /* .check-feedback__title */
+
+    &__title {}
+
+    /* .check-feedback__jalousie-button */
+
+    &__jalousie-button {}
+}
+
+.check-feedback {
+    cursor: pointer;
+    /* .check-feedback__jackdaw */
+
+    &__jackdaw {
+        margin: 0 10px 0 0;
+        width: 17px;
+        height: 17px;
+        background: #333333;
+        border: 1px solid #333333;
+        box-sizing: border-box;
+        border-radius: 3px;
+    }
+
+    /* .check-feedback__title */
+
+    &__title {}
+}
+
+.jackdaw-active {
+    display: none;
+    width: 100%;
+    height: 100%;
+    background: url("../img/ico/true.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+
+    &__show {
         display: flex;
-        flex-direction: column;
-        width: 100%;
+    }
+}
 
+.jalousie-button {
+    background: #983031;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+    border-radius: 2px;
+}
 
-        &__input {
-            display: flex;
+@media all and (max-width:1110px) and (min-width:721px) {
+    .feedback {
+        &__row {
+            width: 100%;
             justify-content: space-between;
         }
     }
 
-    /* .feedback_boxs */
-    &_boxs {
-        display: flex;
-    }
-
-    &_full {
-        display: flex;
-        flex-direction: column;
-    }
-}
-
-.feedback_boxs {
-
-    /* .feedback_boxs__title */
-    &__title {
-        display: flex;
-        margin-right: 5px;
-    }
-}
-
-.important {}
-
-.input {
-
-    /* .input_text */
-    &_text {}
-}
-
-.form_input {
-
-    /* .form_input__check */
-    &__check {
-
-        /* .form_input__check_2 */
-        &_2 {
-            display: flex;
-            @include f14;
-            @include light;
-            color: #000000;
-            cursor: pointer;
-            width: 240px;
-        }
-    }
-
-    /* .form_input__check--box */
-    &__check--box {
-
-        /* .form_input__check--box_2 */
-        &_2 {
-            width: 27.48px;
-            height: 17px;
-
-            background: #333333;
-            border: 1px solid #333333;
-            box-sizing: border-box;
-            border-radius: 3px;
-            display: flex;
-            justify-content: center;
-            margin-right: 10px;
-            cursor: pointer;
+    .item-feedback {
+        &__input {
+            max-width: 120px;
         }
     }
 }
 
-.true {
-    display: flex;
+@media all and (max-width:720px) {
+    .feedback {
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.59), rgba(0, 0, 0, 0.59)),
+            url('../img/feedback_3.jpg');
+        background-size: cover;
+        background-position: center 90%;
+        height: 420px;
+        background-attachment: scroll;
 
-    img {
-        @include noselect;
-        @include nopoint;
+        &__title {
+            @include f34;
+        }
+
+        &__subtitle {
+            @include f20;
+        }
+
+        &__row {
+            flex-direction: column;
+            align-items: center;
+            height: 150px;
+        }
+
+        &__column {
+            width: 221px;
+        }
+    }
+
+    .item-feedback {
+        &__name {
+            min-width: 169px;
+        }
+
+        &__phone {
+            width: 141px;
+        }
+
+        &__mail {
+            min-width: 158px;
+        }
+    }
+
+    .check-feedback {
+        &__title {
+            max-width: 200px;
+        }
+    }
+}
+
+@media all and (max-width:341px) {
+    .feedback {
+        height: 420px;
+
+        &__title {
+            @include f28;
+        }
+
+        &__subtitle {
+            @include f18;
+        }
     }
 }

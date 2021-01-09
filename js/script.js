@@ -1,6 +1,40 @@
+function onlyABC(e) {
+    $(document).ready(function () {
+        $(e).bind("change keyup input click", function () {
+            if (this.value.match(/[^а-яА-Я]/g)) {
+                this.value = this.value.replace(/[^а-яА-Я]/g, '');
+            }
+        });
+    });
+}
+
+function onlyNUM(e) {
+    $(document).ready(function () {
+        $(e).bind("change keyup input click", function () {
+            if (this.value.match(/[^0-9]/g)) {
+                this.value = this.value.replace(/[^0-9]/g, '');
+            }
+        });
+    });
+}
+
 //joulice_button
 const jalousie_button = $(".jalousie_button")
+const jalousieButton = $(".jalousie-button")
 $(jalousie_button).hover(function (e) {
+    $(this).css({
+        'border': '2px solid #FFFFFF',
+        'border-radius': '0'
+    });
+
+}, function () {
+    $(this).css({
+        'border': '',
+        'border-radius': ''
+    });
+});
+
+$(jalousieButton).hover(function (e) {
     $(this).css({
         'border': '2px solid #FFFFFF',
         'border-radius': '0'
@@ -133,20 +167,8 @@ $(sendForm).click(function (e) {
     }
 });
 
-$(document).ready(function () {
-    $("#tel").bind("change keyup input click", function () {
-        if (this.value.match(/[^0-9]/g)) {
-            this.value = this.value.replace(/[^0-9]/g, '');
-        }
-    });
-});
-$(document).ready(function () {
-    $("#name").bind("change keyup input click", function () {
-        if (this.value.match(/[^а-яА-Я]/g)) {
-            this.value = this.value.replace(/[^а-яА-Я]/g, '');
-        }
-    });
-});
+onlyABC("#name");
+onlyNUM("#tel");
 //feedback
 const checkBox_1 = $(".true_1");
 const sendForm_1 = $(".form_inputfeedback__send--feedback input")
@@ -186,21 +208,8 @@ $(sendForm_1).click(function (e) {
 });
 
 
-$(document).ready(function () {
-    $("#tel_1").bind("change keyup input click", function () {
-        if (this.value.match(/[^0-9]/g)) {
-            this.value = this.value.replace(/[^0-9]/g, '');
-        }
-    });
-});
-
-$(document).ready(function () {
-    $("#name_1").bind("change keyup input click", function () {
-        if (this.value.match(/[^а-яА-Я]/g)) {
-            this.value = this.value.replace(/[^а-яА-Я]/g, '');
-        }
-    });
-});
+onlyABC("#name_1");
+onlyNUM("#tel_1");
 //
 
 //Вызов feedback
@@ -247,5 +256,44 @@ $(instVk).hover(function () {
     $(this).css({
         "filter": ""
     });
+});
+//
+
+//feedback
+const checkFeedback = $(".check-feedback");
+const jackdawActive = $(".jackdaw-active");
+let feedbackCheck = false;
+$(checkFeedback).click(function (e) {
+    e.preventDefault();
+    $(jackdawActive).toggleClass("jackdaw-active__show");
+    if ($(jackdawActive).hasClass("jackdaw-active__show")) {
+        feedbackCheck = true;
+    } else {
+        feedbackCheck = false;
+    }
+});
+
+const feedbackButton = $(".feedback-button");
+const itemFeedback__name = $(".item-feedback__name");
+const itemFeedback__phone = $(".item-feedback__phone");
+const itemFeedback__mail = $(".item-feedback__mail");
+const feedbackError = $(".feedback__error");
+
+
+onlyABC(itemFeedback__name);
+onlyNUM(itemFeedback__phone);
+
+
+$(feedbackButton).click(function (e) {
+    e.preventDefault();
+    if ((feedbackCheck == false) || (itemFeedback__name.val() == "") || ((itemFeedback__phone.val().length != 11)) || (itemFeedback__mail.val() == "")) {
+        $(feedbackError).addClass("jackdaw-active__show");
+    } else {
+        $(jackdawActive).removeClass("jackdaw-active__show");
+        $(itemFeedback__name).val("");
+        $(itemFeedback__phone).val("");
+        $(itemFeedback__mail).val("");
+        $(feedbackError).removeClass("jackdaw-active__show");
+    }
 });
 //
