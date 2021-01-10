@@ -1658,11 +1658,14 @@ a:link {
 }
 
 @media all and (max-width: 1000px) {
+  .step {
+    padding-left: 15px;
+  }
   .benefist_right__title {
     padding-left: 15px;
   }
   .benefist_right__step {
-    padding-left: 15px;
+    padding: 0;
   }
 }
 
@@ -1730,7 +1733,7 @@ a:link {
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.59), rgba(0, 0, 0, 0.59)), url("../img/feedback_2.jpg");
   width: 100%;
   background-size: contain;
-  background-position: center 100%;
+  background-position: center 180%;
   background-attachment: fixed;
   /* .feedback__body */
   /* .feedback__title */

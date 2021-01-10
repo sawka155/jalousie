@@ -79,17 +79,40 @@ $(nav_button).hover(function () {
 
 //scroll_to
 $(nav_button[0]).click(function () {
-    scrollToAbout();
+    scrollTo(".about");
 });
 $(nav_button[4]).click(function () {
-    scrollToAbout();
+    scrollTo(".about");
+});
+//
+$(nav_button[1]).click(function () {
+    scrollTo(".suggestions ");
+});
+$(nav_button[5]).click(function () {
+    scrollTo(".suggestions ");
+});
+//
+$(nav_button[2]).click(function () {
+    scrollTo(".benefist");
+});
+$(nav_button[6]).click(function () {
+    scrollTo(".benefist");
+});
+//
+$(nav_button[3]).click(function () {
+    scrollTo(".feedback");
+});
+$(nav_button[7]).click(function () {
+    scrollTo(".feedback");
 });
 
-function scrollToAbout(params) {
+
+function scrollTo(params) {
     $([document.documentElement, document.body]).animate({
-        scrollTop: $("#about").offset().top
+        scrollTop: $(params).offset().top
     }, 1000);
 }
+
 $(".header_mobile__open--block").click(function () {
     $(".header_mobile__open").css({
         'opacity': '',

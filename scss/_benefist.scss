@@ -103,6 +103,9 @@
 
 @media all and (max-width: 1000px) {
 
+    .step {
+        padding-left: 15px;
+    }
 
     .benefist_right {
         &__title {
@@ -110,7 +113,7 @@
         }
 
         &__step {
-            padding-left: 15px;
+            padding: 0;
         }
     }
 }
