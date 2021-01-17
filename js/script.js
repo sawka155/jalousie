@@ -86,10 +86,10 @@ $(nav_button[4]).click(function () {
 });
 //
 $(nav_button[1]).click(function () {
-    scrollTo(".suggestions ");
+    scrollTo(".suggestions");
 });
 $(nav_button[5]).click(function () {
-    scrollTo(".suggestions ");
+    scrollTo(".suggestions");
 });
 //
 $(nav_button[2]).click(function () {
@@ -270,6 +270,16 @@ $('.feedback_box').click(function (e) {
 
 //suggestions_top__button
 const instVk = $(".suggestions_top__button");
+const vk = $(".suggestions_vk");
+const inst = $(".suggestions_inst");
+$(vk).click(function (e) {
+    e.preventDefault();
+    location.href = "https://vk.com/club124044801";
+});
+$(inst).click(function (e) {
+    e.preventDefault();
+    location.href = "https://www.instagram.com/zhaluzyaki/";
+});
 $(instVk).hover(function () {
     // over
     $(this).css({
